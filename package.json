@@ -1,0 +1,30 @@
+{
+  "name": "get-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "run": "node ./dist/index.js",
+    "start": "npm run build && npm run run",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollabck",
+    "truncate": "knex migrate:rollback --all && knex migrate:latest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "knex": "^0.20.10",
+    "node-fetch": "^2.6.0",
+    "sqlite3": "^4.1.1",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.16",
+    "@types/knex": "^0.16.1",
+    "@types/node-fetch": "^2.5.4",
+    "@types/sqlite3": "^3.1.6",
+    "ts-node": "^8.6.2"
+  }
+}
